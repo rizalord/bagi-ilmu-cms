@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pr-views",
+      "handler": "pr-view.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pr-views/count",
+      "handler": "pr-view.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pr-views/:id",
+      "handler": "pr-view.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pr-views",
+      "handler": "pr-view.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pr-views/:id",
+      "handler": "pr-view.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pr-views/:id",
+      "handler": "pr-view.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

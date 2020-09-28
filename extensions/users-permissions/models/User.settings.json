@@ -1,0 +1,125 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "city": {
+      "type": "string"
+    },
+    "province": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "video_comments": {
+      "collection": "video-comment",
+      "via": "user"
+    },
+    "video_view": {
+      "model": "video-view",
+      "via": "user"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "note_comments": {
+      "via": "user",
+      "collection": "note-comment"
+    },
+    "notes": {
+      "via": "user",
+      "collection": "note"
+    },
+    "note_likes": {
+      "via": "user",
+      "collection": "note-like"
+    },
+    "note_views": {
+      "via": "user",
+      "collection": "note-view"
+    },
+    "pr_likes": {
+      "via": "user",
+      "collection": "pr-like"
+    },
+    "pr_views": {
+      "via": "user",
+      "collection": "pr-view"
+    },
+    "pr_vote_comments": {
+      "via": "user",
+      "collection": "pr-vote-comment"
+    },
+    "pr_comments": {
+      "via": "user",
+      "collection": "pr-comment"
+    },
+    "prs": {
+      "via": "user",
+      "collection": "pr"
+    },
+    "bookmarks": {
+      "via": "user",
+      "collection": "bookmark"
+    }
+  }
+}

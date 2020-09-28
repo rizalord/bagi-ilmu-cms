@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prs",
+  "info": {
+    "name": "PR"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subject": {
+      "model": "subject",
+      "via": "prs"
+    },
+    "education": {
+      "model": "education",
+      "via": "prs"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "prs"
+    },
+    "pr_comments": {
+      "collection": "pr-comment",
+      "via": "pr"
+    },
+    "pr_likes": {
+      "collection": "pr-like",
+      "via": "pr"
+    },
+    "pr_views": {
+      "collection": "pr-view",
+      "via": "pr"
+    },
+    "bookmarks": {
+      "via": "pr",
+      "collection": "bookmark"
+    }
+  }
+}

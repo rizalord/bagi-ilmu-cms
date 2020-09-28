@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_comments",
+  "info": {
+    "name": "Video Comment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "course_video": {
+      "via": "video_comments",
+      "model": "course-video"
+    },
+    "text": {
+      "type": "string"
+    },
+    "user": {
+      "via": "video_comments",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

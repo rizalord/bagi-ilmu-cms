@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pr_likes",
+  "info": {
+    "name": "PR Like"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "pr": {
+      "via": "pr_likes",
+      "model": "pr"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "pr_likes"
+    }
+  }
+}

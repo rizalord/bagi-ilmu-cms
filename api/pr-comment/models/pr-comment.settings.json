@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pr_comments",
+  "info": {
+    "name": "PR Comment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "pr": {
+      "via": "pr_comments",
+      "model": "pr"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "pr_comments"
+    },
+    "text": {
+      "type": "text"
+    },
+    "correct": {
+      "type": "boolean"
+    },
+    "pr_vote_comments": {
+      "collection": "pr-vote-comment",
+      "via": "pr_comment"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pr-vote-comments",
+      "handler": "pr-vote-comment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pr-vote-comments/count",
+      "handler": "pr-vote-comment.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pr-vote-comments/:id",
+      "handler": "pr-vote-comment.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pr-vote-comments",
+      "handler": "pr-vote-comment.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pr-vote-comments/:id",
+      "handler": "pr-vote-comment.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pr-vote-comments/:id",
+      "handler": "pr-vote-comment.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

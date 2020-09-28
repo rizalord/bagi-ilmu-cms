@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pr_views",
+  "info": {
+    "name": "PR View"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "pr": {
+      "via": "pr_views",
+      "model": "pr"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "pr_views"
+    }
+  }
+}

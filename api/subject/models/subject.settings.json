@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "name": "Subject"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "notes": {
+      "via": "subject",
+      "collection": "note"
+    },
+    "prs": {
+      "via": "subject",
+      "collection": "pr"
+    }
+  }
+}

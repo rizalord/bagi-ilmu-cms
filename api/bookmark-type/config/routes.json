@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bookmark-types",
+      "handler": "bookmark-type.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bookmark-types/count",
+      "handler": "bookmark-type.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bookmark-types/:id",
+      "handler": "bookmark-type.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bookmark-types",
+      "handler": "bookmark-type.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bookmark-types/:id",
+      "handler": "bookmark-type.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bookmark-types/:id",
+      "handler": "bookmark-type.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

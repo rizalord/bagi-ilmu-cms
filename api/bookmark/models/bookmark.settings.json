@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookmarks",
+  "info": {
+    "name": "Bookmark"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "bookmarks"
+    },
+    "bookmark_type": {
+      "model": "bookmark-type",
+      "via": "bookmarks"
+    },
+    "note": {
+      "model": "note",
+      "via": "bookmarks"
+    },
+    "pr": {
+      "model": "pr",
+      "via": "bookmarks"
+    },
+    "course": {
+      "model": "course",
+      "via": "bookmarks"
+    }
+  }
+}

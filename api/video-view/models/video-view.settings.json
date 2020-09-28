@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_views",
+  "info": {
+    "name": "Video View"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "course_video": {
+      "via": "video_views",
+      "model": "course-video"
+    },
+    "user": {
+      "via": "video_view",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

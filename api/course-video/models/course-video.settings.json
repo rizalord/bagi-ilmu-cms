@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "course_videos",
+  "info": {
+    "name": "Course Video"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "course": {
+      "model": "course",
+      "via": "course_videos"
+    },
+    "video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "video_comments": {
+      "collection": "video-comment",
+      "via": "course_video"
+    },
+    "video_views": {
+      "collection": "video-view",
+      "via": "course_video"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "note_views",
+  "info": {
+    "name": "Note View"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "note": {
+      "model": "note",
+      "via": "note_views"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "note_views"
+    }
+  }
+}

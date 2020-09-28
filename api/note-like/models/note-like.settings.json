@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "note_likes",
+  "info": {
+    "name": "Note Like"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "note": {
+      "via": "note_likes",
+      "model": "note"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "note_likes"
+    }
+  }
+}

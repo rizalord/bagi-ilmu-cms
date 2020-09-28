@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notes",
+  "info": {
+    "name": "Note"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subject": {
+      "model": "subject",
+      "via": "notes"
+    },
+    "education": {
+      "model": "education",
+      "via": "notes"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "note_comments": {
+      "collection": "note-comment",
+      "via": "note"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "notes"
+    },
+    "note_views": {
+      "via": "note",
+      "collection": "note-view"
+    },
+    "note_likes": {
+      "collection": "note-like",
+      "via": "note"
+    },
+    "bookmarks": {
+      "via": "note",
+      "collection": "bookmark"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "educations",
+  "info": {
+    "name": "Education"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "notes": {
+      "via": "education",
+      "collection": "note"
+    },
+    "prs": {
+      "via": "education",
+      "collection": "pr"
+    }
+  }
+}
